@@ -1,0 +1,19 @@
+sec,group_name,project_title,project_note,proposal(4),monitoring(5),monitoring_note,noti(5),noti_note,control(5),control_note,storage(5),storage_note,logic(5),logic_note,slide(3),slide_note,present(3),present_note,total,abet,group_key
+003/803,Sec3: Good morning,ระบบตรวจจับความเข้มข้นของ Gas,Use Light Sensor instead of pressure meter,4,4.0,OK,5.0,Telegram and sound,4.0,Turn off notification and turning on/off ventilation system (but does not affect the flow),5.0,Two collections,4.5,OK,3,OK,3,OK,32.5,4.0,sec3:goodmorning
+003/803,Sec3: no 123,ระบบตรวจจับสินค้าค้าง Stock,Should turn off auto noti,4,4.0,OK,4.0,OK,3.0,OK,4.0,One collection,3.5,OK,3,OK,3,OK,28.5,2.0,sec3:no123
+003/803,Sec3: eiei,ระบบเปิดปิดไฟอัตโนมัติ,Should be able to turn the system on/off manually or automatically,4,4.0,OK,4.0,OK,4.0,OK,4.0,One collection,4.0,OK,3,OK,3,OK,30.0,4.0,sec3:eiei
+003/803,Sec3: nguang-non,Inventory Tracking System,"Count stock in/out, notify summary after a certain period",4,4.0,OK,4.0,OK,5.0,Multiple controls,5.0,Two collections,4.5,OK,3,OK,3,OK,32.5,4.0,sec3:nguang-non
+003/803,Sec3: tew,ระบบแจ้งเตือนเครื่องจักรเสีย,Use NR Android Phone,4,3.0,OK,3.0,OK,3.0,OK,4.0,OK,3.0,OK,3,OK,3,OK,26.0,4.0,sec3:tew
+003/803,Sec3: ไก่บักโจ้น,ระบบป้องการทกรกได้รับแสงมากเกินไปในห้อง IMCU,Use Light Sensor,4,4.0,OK,4.0,OK,3.0,OK,4.0,OK,3.5,OK,3,OK,3,OK,28.5,3.0,sec3:ไก่บักโจ้น
+003/803,Sec3: นางฟ้าตัวน้อยของแม่,ระบบนับสินค้าอัตโนมัติด้วยกาตรวจจับการสั่นสะเทือน,"Use Vibration Sensor, Can input number for takeout",4,4.0,OK,4.5,OK,4.5,OK,5.0,OK,4.5,OK,3,OK,3,OK,32.5,3.0,sec3:นางฟ้าตัวน้อยของแม่
+003/803,Sec3: ไออีสีชมพู,ระบบนับสินค้าในคลัง,เอาเข้าด้วย Sensor ออกด้วยการพิม,4,4.0,OK,4.0,OK,4.0,OK,5.0,Two collections,4.0,OK,3,OK,3,OK,31.0,3.0,sec3:ไออีสีชมพู
+003/803,Sec3: ภูเพียง,ระบบตรวจจับการสั่นและแจ้งซ่อมบำรุง,ตรวจจับ Frequency ของการสั่น,4,3.0,Quite simple,3.0,"One type, no time",3.0,Reset button,1.5,Not implemented,2.5,Too simple,3,OK,3,Cannot describe code,23.0,0.0,sec3:ภูเพียง
+006/806,Sec6: jungdaikoboru,ระบบวัดระดับน้ำในท่อ,Use Ultrasonic,4,5.0,Nice dashboard,4.0,OK,4.0,OK,5.0,2 Collection,4.0,OK,3,OK,3,OK,32.0,4.0,sec6:jungdaikoboru
+006/806,Sec6: มีหนุ่มตี๋เป็นเส้นชัย,ระบบตรวจจับขโมยจากการสั่นของประตู,Use Vibration sensor,4,3.5,OK,4.0,OK,3.0,OK,4.0,OK,3.0,OK,3,OK,3,OK,27.5,1.0,sec6:มีหนุ่มตี๋เป็นเส้นชัย
+006/806,Sec6: Oppa Icy,Inventory Sorting System,Use ML,4,5.0,OK,5.0,OK,4.0,OK,5.0,OK,5.0,OK,3,OK,3,OK,34.0,4.0,sec6:oppaicy
+006/806,Sec6: print(a),ระบบเปิดปิดไฟอัตโนมัติจากการผ่าน Sensor,Use IR Sensor,4,4.0,OK,3.5,One type,4.0,OK,4.0,One collection,4.0,Delay with cancel,3,OK,3,OK,29.5,3.5,sec6:print(a)
+006/806,Sec6: บิดหมด ไม่สลดบิดอีก,ระบบนับสินค้าบนสายพาน,Use Mobile Sensor,4,4.0,OK,4.0,Two types,5.0,Good,4.0,One collection,4.0,OK,3,OK,3,OK,31.0,3.0,sec6:บิดหมดไม่สลดบิดอีก
+006/806,Sec6: ไม่บอกหรอก,ระบบตรวจจับจำนวนสินค้าจากระดับสินค้า,Ultrasonic Sensor,4,3.0,Confusing,3.0,OK,3.0,OK,3.0,OK,3.0,OK,3,OK,3,OK,25.0,3.0,sec6:ไม่บอกหรอก
+006/806,Sec6: มา 3,ระบบตรวจการเสียหายของเครื่องจักรโดยอัตโนมัติ,"Should have ""Repair Done"" Btn",4,3.5,OK,4.0,OK,4.0,OK,4.0,OK,3.5,OK,3,OK,3,OK,29.0,4.0,sec6:มา3
+006/806,Sec6: มี 2,ระบบฟอกอากาศในโรงงาน,Light Sensor instead of PM2.5,4,4.0,OK,4.0,"Two type, the other one is not important",4.0,OK,4.0,One collection,4.0,OK,3,OK,3,OK,30.0,4.0,sec6:มี2
+006/806,Sec6: ไม่ทันแล้ว,ระบบตรวจจับความร้อนของเครื่องจักร,Use Ultrasonic Sensor Instead,4,4.0,OK,4.0,Two Types,5.0,Good,4.0,One collection,4.5,OK,3,OK,3,OK,31.5,3.0,sec6:ไม่ทันแล้ว
