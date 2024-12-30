@@ -19,12 +19,25 @@ test('example', function () {
     //     // print_r($results);
 
     $projects = DB::table("project_assignments")
-        ->leftJoin('project_grades', 'project_assignments.group_key', '=', 'project_grades.group_key');
+        ->leftJoin('project_grades', 'project_assignments.group_key', '=', 'project_grades.group_key')->select([
+            'project_assignments.*',
+            'project_grades.group_name',
+            'project_grades.project_title',
+            'project_grades.monitoring(5)',
+            'project_grades.noti(5)',
+            'project_grades.control(5)',
+            'project_grades.storage(5)',
+            'project_grades.logic(5)',
+            'project_grades.slide(3)',
+            'project_grades.present(3)',
+            'project_grades.total',
+        ]);
+
 
     $results = DB::table("rosters")
         ->joinSub($projects, "projects", function (JoinClause $join) {
             $join->on('rosters.student_id', '=', 'projects.student_id');
-        })->where("rosters.student_id", "=", "660612134")
+        })
         ->get();
 
 

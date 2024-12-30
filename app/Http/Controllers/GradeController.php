@@ -16,7 +16,20 @@ class GradeController extends Controller
         ]);
 
         $projects = DB::table("project_assignments")
-            ->leftJoin('project_grades', 'project_assignments.group_key', '=', 'project_grades.group_key');
+            ->leftJoin('project_grades', 'project_assignments.group_key', '=', 'project_grades.group_key')->select([
+                'project_assignments.*',
+                'project_grades.group_name',
+                'project_grades.project_title',
+                'project_grades.proposal(4)',
+                'project_grades.monitoring(5)',
+                'project_grades.noti(5)',
+                'project_grades.control(5)',
+                'project_grades.storage(5)',
+                'project_grades.logic(5)',
+                'project_grades.slide(3)',
+                'project_grades.present(3)',
+                'project_grades.total',
+            ]);
 
         try {
             $results = DB::table("rosters")
