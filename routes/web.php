@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\GradeController;
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('pages.home');
 });
 
-Route::get('/grade', [GradeController::class, 'getGrade']);
+Route::post('/grade', [GradeController::class, 'getGrade']);

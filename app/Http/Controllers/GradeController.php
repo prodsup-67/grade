@@ -11,17 +11,26 @@ class GradeController extends Controller
     public function getGrade(Request $request)
     {
 
+        $validated = $request->validate([
+            "student_id" => ['required', 'min:9', 'max:9', 'regex:/\d+/'],
+        ]);
+
         $projects = DB::table("project_assignments")
             ->leftJoin('project_grades', 'project_assignments.group_key', '=', 'project_grades.group_key');
 
-        $results = DB::table("rosters")
-            ->joinSub($projects, "projects", function (JoinClause $join) {
-                $join->on('rosters.student_id', '=', 'projects.student_id');
-            })->where("rosters.student_id", "=", "660612134")
-            ->get();
+        try {
+            $results = DB::table("rosters")
+                ->joinSub($projects, "projects", function (JoinClause $join) {
+                    $join->on('rosters.student_id', '=', 'projects.student_id');
+                })->where("rosters.student_id", "=", $validated["student_id"])
+                ->firstOrFail();
+        } catch (\Throwable $e) {
+            $results = null;
+        };
 
-        return view('grade', [
-            "grade" => $results
+
+        return view('pages.grade', [
+            "grade" => $results,
         ]);
     }
 }
