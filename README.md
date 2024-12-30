@@ -20,3 +20,7 @@
 -   `php artisan db:seed --class=RosterSeeder`
 -   `php artisan db:seed --class=ProjectAssignmentSeeder`
 -   `php artisan db:seed --class=ProjectGradeSeeder`
+
+# Guide
+
+-   https://invariance.dev/2022-08-04-deploy-laravel-on-railway.html
