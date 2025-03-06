@@ -14,7 +14,7 @@ class ProjectAssignmentSeeder extends Seeder
      */
     public function run(): void
     {
-        $csv = Reader::createFromPath('data_seed/project_assignment.csv', 'r')->setHeaderOffset(0)
+        $csv = Reader::createFromPath('data_seed/S02_project_assignment.csv', 'r')->setHeaderOffset(0)
             ->setEscape('');
 
         foreach ($csv as $record) {

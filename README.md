@@ -17,9 +17,13 @@
 
 # Execute seeding
 
--   `php artisan db:seed --class=RosterSeeder`
+-   `php artisan db:seed --class=RosterSeeder
 -   `php artisan db:seed --class=ProjectAssignmentSeeder`
 -   `php artisan db:seed --class=ProjectGradeSeeder`
+
+# After reset database
+
+`php artisan migrate; php artisan db:seed --class=RosterSeeder; php artisan db:seed --class=ProjectAssignmentSeeder; php artisan db:seed --class=ProjectGradeSeeder`
 
 # Guide
 

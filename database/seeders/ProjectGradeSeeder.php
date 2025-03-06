@@ -14,7 +14,7 @@ class ProjectGradeSeeder extends Seeder
      */
     public function run(): void
     {
-        $csv = Reader::createFromPath('data_seed/project_grade.csv', 'r')->setHeaderOffset(0)
+        $csv = Reader::createFromPath('data_seed/S01_project_grade.csv', 'r')->setHeaderOffset(0)
             ->setEscape('');
 
         foreach ($csv as $record) {
