@@ -37,6 +37,16 @@ class GradeController extends Controller
                     $join->on('rosters.student_id', '=', 'projects.student_id');
                 })->where("rosters.student_id", "=", $validated["student_id"])
                 ->firstOrFail();
+
+            // dd([$results]);
+            $groupKey = $results->group_key;
+            $members = DB::table("project_assignments")
+                ->where("project_assignments.group_key", "=", $groupKey)
+                ->leftJoin('rosters', 'project_assignments.student_id', '=', 'rosters.student_id')->select([
+                    'rosters.*',
+                ])->get();
+            // dd([$members]);
+            
         } catch (\Throwable $e) {
             $results = null;
         };
@@ -44,6 +54,7 @@ class GradeController extends Controller
 
         return view('pages.grade', [
             "grade" => $results,
+            "members" => $members
         ]);
     }
 }

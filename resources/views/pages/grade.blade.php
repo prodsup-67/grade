@@ -2,6 +2,7 @@
 @section('content')
     {{-- {{ dd($grade) }} --}}
     @if (!is_null($grade) && !is_null($grade->total))
+        <hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700">
         <div class="flex flex-col gap-2 mt-4">
             <div class="text-4xl font-bold text-gray-700">{{ $grade->firstname }} {{ $grade->lastname }}</div>
             <div class="text-lg text-gray-600">Group: {{ $grade->group_name }}</div>
@@ -128,7 +129,20 @@
                 </tr>
             </tbody>
         </table>
+        <hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700">
+        <div class="mt-4">
+            <div class="text-4xl font-bold text-gray-700">Team Member</div>
+            <div class="text-lg text-gray-600">Group: {{ $grade->group_name }}</div>
+        </div>
+        <div class="flex mt-4 gap-2">
+            @foreach ($members as $member)
+               <div class="text-white bg-blue-500 px-2 py-1 rounded-md">{{ $member->firstname }} {{ $member->lastname }}</div>
+            @endforeach
+        </div>
+        <div class="text-gray-400 italic mt-2">(ฝากเช็คความถูกต้อง)</div>
+
+        <hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700">
     @else
-        <div class="text-2xl mt-3 text-gray-600">ไม่พบคะแนน รอทำโปรเจคก่อน</div>
+        <div class="text-2xl mt-2 text-gray-600">ไม่พบคะแนน รอทำโปรเจคก่อน</div>
     @endif
 @endsection

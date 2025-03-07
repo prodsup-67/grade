@@ -6,7 +6,7 @@
 </head>
 
 <body>
-    <div class="container mx-auto">
+    <div class="container mx-auto px-4">
         <header class="mt-3">
             @include('includes.header')
         </header>
