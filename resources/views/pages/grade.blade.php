@@ -143,6 +143,6 @@
 
         <hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700">
     @else
-        <div class="text-2xl mt-2 text-gray-600">ไม่พบคะแนน รอทำโปรเจคก่อน</div>
+        <div class="text-2xl mt-2 text-gray-600">ไม่พบคะแนน ติดต่อ อ.นิรันดร์ ด่วน</div>
     @endif
 @endsection
