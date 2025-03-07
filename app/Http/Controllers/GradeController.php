@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Database\Query\JoinClause;
+use Illuminate\Validation\Rule;
 
 class GradeController extends Controller
 {
@@ -12,7 +13,13 @@ class GradeController extends Controller
     {
 
         $validated = $request->validate([
-            "student_id" => ['required', 'min:9', 'max:9', 'regex:/\d+/'],
+            "student_id" => [
+                'required',
+                'min:9',
+                'max:9',
+                'regex:/\d+/',
+                Rule::exists('rosters', 'student_id')
+            ],
         ]);
 
         $projects = DB::table("project_assignments")
@@ -46,9 +53,10 @@ class GradeController extends Controller
                     'rosters.*',
                 ])->get();
             // dd([$members]);
-            
+
         } catch (\Throwable $e) {
             $results = null;
+            $members = [];
         };
 
 
