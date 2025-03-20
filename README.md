@@ -23,7 +23,7 @@
 
 # After reset database
 
--   `php artisan db:seed --class=RosterSeeder; php artisan db:seed --class=ProjectAssignmentSeeder; php artisan db:seed --class=ProjectGradeSeeder`
+-   `php artisan db:seed --class=RosterSeeder; php artisan db:seed --class=ProjectAssignmentSeeder; php artisan db:seed --class=ProjectGradeSeeder; php artisan db:seed --class=ClassGradeSeeder`
 
 # Reset
 

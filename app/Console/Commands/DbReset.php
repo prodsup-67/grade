@@ -31,5 +31,6 @@ class DbReset extends Command
         DB::table('project_grades')->truncate();
         DB::table('project_assignments')->truncate();
         DB::table('rosters')->truncate();
+        DB::table('class_grades')->truncate();
     }
 }

@@ -39,14 +39,17 @@ class GradeController extends Controller
             ]);
 
         try {
-            $results = DB::table("rosters")
+            $resultsClass = DB::table("class_grades")->where("class_grades.student_id", "=", $validated["student_id"])
+            ->firstOrFail();
+            $resultsProject = DB::table("rosters")
                 ->joinSub($projects, "projects", function (JoinClause $join) {
                     $join->on('rosters.student_id', '=', 'projects.student_id');
                 })->where("rosters.student_id", "=", $validated["student_id"])
                 ->firstOrFail();
 
-            // dd([$results]);
-            $groupKey = $results->group_key;
+            // dd([$resultsProject]);
+            // dd([$resultsClass]);
+            $groupKey = $resultsProject->group_key;
             $members = DB::table("project_assignments")
                 ->where("project_assignments.group_key", "=", $groupKey)
                 ->leftJoin('rosters', 'project_assignments.student_id', '=', 'rosters.student_id')->select([
@@ -55,13 +58,15 @@ class GradeController extends Controller
             // dd([$members]);
 
         } catch (\Throwable $e) {
-            $results = null;
+            $resultsProject = null;
+            $resultsClass = null;
             $members = [];
         };
 
 
         return view('pages.grade', [
-            "grade" => $results,
+            "projectGrade" => $resultsProject,
+            "classGrade" => $resultsClass,
             "members" => $members
         ]);
     }
